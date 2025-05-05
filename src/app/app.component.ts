@@ -3,6 +3,7 @@ import { Component, computed, inject } from '@angular/core';
 import { AuthComponent } from './auth/auth.component';
 import { LearningResourcesComponent } from './learning-resources/learning-resources.component';
 import { AuthService } from './auth/auth.service';
+import { AuthDirective } from './auth/auth.directive';
 // import { NgIf } from '@angular/common';
 
 @Component({
@@ -10,7 +11,7 @@ import { AuthService } from './auth/auth.service';
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [AuthComponent, LearningResourcesComponent],
+  imports: [AuthComponent, LearningResourcesComponent, AuthDirective],
 })
 export class AppComponent {
   private authService = inject(AuthService);
